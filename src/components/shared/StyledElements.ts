@@ -34,7 +34,9 @@ export const Nav = styled.nav`
 export const Container  = styled.div`
   position: absolute;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  height: 100%;
 `;
 
 export const Body  = styled.section`
@@ -45,4 +47,5 @@ export const Body  = styled.section`
   justify-content: flex-start;
   padding: 0 120px;
   flex-direction: column;
+  flex-grow: 1;
 `;
