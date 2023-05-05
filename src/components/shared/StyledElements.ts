@@ -17,7 +17,7 @@ export const Header  = styled.h1`
 
 export const Block  = styled.div`
   margin: 20px 0;
-  height: 100vh;
+  height: 100%;
   align-items: center;
 `;
 
@@ -32,7 +32,7 @@ export const Nav = styled.nav`
 `;
 
 export const Container  = styled.div`
-  height: 100vh;
+  position: absolute;
   display: flex;
   flex-direction: column;
 `;
@@ -40,7 +40,6 @@ export const Container  = styled.div`
 export const Body  = styled.section`
   color: #fff;
   background: ${({theme}) => theme.palette.common.black};
-  height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
