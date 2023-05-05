@@ -12,7 +12,7 @@ const Cards = styled.div`
    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    grid-gap: 20px;
    margin: 20px 0;
-     grid-auto-flow: dense;
+   grid-auto-flow: dense;
 `;
 
 const Card = styled.div<CardProps>`
