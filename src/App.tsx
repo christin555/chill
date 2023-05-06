@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './components/home';
 import Dates from './components/dates';
+import Anim from './components/anim';
 import {Routes, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import theme from "./components/shared/theme";
@@ -22,6 +23,9 @@ function App() {
                           <li>
                               <Link to='/dates'>Dates</Link>
                           </li>
+                          <li>
+                              <Link to='/anim'>Anim</Link>
+                          </li>
                       </ul>
                   </Nav>
         </header>
@@ -29,6 +33,7 @@ function App() {
               <Routes>
                   <Route path='/' element={<Home/>} />
                   <Route path='/dates' element={<Dates/>} />
+                  <Route path='/anim' element={<Anim/>} />
               </Routes>
           </Body>
           </Container>

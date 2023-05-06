@@ -19,6 +19,10 @@ export const Block  = styled.div`
   margin: 20px 0;
   height: 100%;
   align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `;
 
 export const Nav = styled.nav`
@@ -29,6 +33,15 @@ export const Nav = styled.nav`
   justify-content: flex-start;
   font-size: 12px;
   padding: 0 120px;
+  
+  ul {
+    display: flex;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+    list-style: none;
+  }
 `;
 
 export const Container  = styled.div`
