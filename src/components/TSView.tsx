@@ -1,6 +1,6 @@
 import {Header, Block} from './shared/StyledElements';
 import Select from './shared/Select';
-import promiseManager from "./tools/roomFormatter";
+import promiseManager from "./tools/promiseManager";
 
 const TsView = () => {
     const pm = promiseManager();
