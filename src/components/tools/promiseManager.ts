@@ -22,7 +22,6 @@ interface promiseManager {
     resolveAll():Promise<void>
     getAll():{[key in keyof HandlersRes]: object }
     get(name: keyof HandlersRes, def?: any):{[key in keyof HandlersRes]: object }
-    named: Named
 }
 
 const promiseManager = ():promiseManager => {
@@ -56,7 +55,6 @@ const promiseManager = ():promiseManager => {
     }
 
     return {
-        named,
         push(...props) {
             (Array.isArray(props[0]) ? props : [props])
                 .forEach(([promise, name, handler]) => {
