@@ -15,7 +15,7 @@ type SelectProps = {
 }
 
 function isOption(value: any): value is Option{
-    return typeof value && value === 'object';
+    return typeof value && 'value' in value;
 }
 
 function Select ({selected, options, onChange}: SelectProps) {
