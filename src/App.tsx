@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/home';
 import Dates from './components/dates';
 import Anim from './components/anim';
-import TS from './components/ts';
+import TSView from './components/TSView';
 import {Routes, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import theme from "./components/shared/theme";
@@ -38,7 +38,7 @@ function App() {
                   <Route path='/' element={<Home/>} />
                   <Route path='/dates' element={<Dates/>} />
                   <Route path='/anim' element={<Anim/>} />
-                  <Route path='/ts' element={<TS/>} />
+                  <Route path='/ts' element={<TSView/>} />
               </Routes>
           </Body>
           </Container>

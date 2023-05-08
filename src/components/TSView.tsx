@@ -1,10 +1,19 @@
 import {Header, Block} from './shared/StyledElements';
 import Select from './shared/Select';
+import promiseManager from "./tools/roomFormatter";
 
 const TsView = () => {
-    const dateNow:Date = new Date();
-    const blackDay:Date = new Date(2022, 3, 10);
-    const hotDay:Date = new Date( dateNow.getMonth() > 5 ? dateNow.getFullYear() +1 : dateNow.getFullYear(), 5, 1);
+    const pm = promiseManager();
+    pm.push(
+        [new Promise((resolve) => resolve([{id: 2, name: 3}])), 'name2'],
+        [new Promise((resolve) => resolve([{id: 3, name: 3}])), 'name3']
+        );
+
+    pm.push(new Promise((resolve) => resolve([{id: 1, name: 2}])), 'name');
+    pm.resolveAll().then(() =>{
+       const res =  pm.getAll();
+       console.log('result', res)
+    })
 
     return <>
         <Header> TS </Header>
