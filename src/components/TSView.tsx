@@ -1,6 +1,7 @@
 import {Header, Block} from './shared/StyledElements';
 import Select from './shared/Select';
 import promiseManager from "./tools/promiseManager";
+import Address from "./tools/Address";
 
 const TsView = () => {
     const pm = promiseManager();
@@ -14,20 +15,33 @@ const TsView = () => {
        const res =  pm.getAll();
        console.log('result', res)
     })
+//ошибка
+    const address = Address({
+        address: {
+            id: 1,
+            city: 'Тюмень',
+            street: 'ул. Мельникайте',
+            house: 'д125',
+            flat: 'кв 44'
+        },
+        view: "flat"
+    })
+
+    console.log(address)
 
     return <>
         <Header> TS </Header>
         <Block>
-       <Select
-           onChange={console.log}
-           options={[
+            <Select
+                onChange={console.log}
+                options={[
                {value: 1,label: 'text 1 '},
                {value: 2,label: 'text 2 '},
                {value: 3,label: 'text 3 '},
                {value: 4,label: 'text 4'}
-           ]}
-           selected={1}
-       />
+                ]}
+                selected={1}
+            />
             <Select
                 onChange={console.log}
                 options={[
